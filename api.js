@@ -33,7 +33,7 @@ app.get('/songlist/:gname', function(req,res){
 
 // get song details by id//
 app.get('/songdetails/:songid', function(req,res){
-    db.collection('songs').find({"id": req.params.songid}).toArray(function(err,result){
+    db.collection('songs').find({"id": Number(req.params.songid)}).toArray(function(err,result){
         if(err) throw err;
         res.send(result)
     })
