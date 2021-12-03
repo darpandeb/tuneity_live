@@ -1,0 +1,26 @@
+{
+  "name": "tuneity",
+  "version": "1.0.0",
+  "description": "music web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node api.js",
+    "dev":"nodemon api.js"
+  },
+  "keywords": [
+    "node",
+    "npm"
+  ],
+  "author": "edureka",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.2.0",
+    "nodemon": "^2.0.15",
+    "spotify-web-api-node": "^5.0.2"
+  }
+}
