@@ -7,10 +7,12 @@ dotenv.config()
 var mongourl = 'mongodb://testuser:userpass@cluster0-shard-00-00.tu5oi.mongodb.net:27017,cluster0-shard-00-01.tu5oi.mongodb.net:27017,cluster0-shard-00-02.tu5oi.mongodb.net:27017/edureka?ssl=true&replicaSet=atlas-86s3em-shard-0&authSource=admin&retryWrites=true&w=majority';
 var port = process.env.PORT || 3001;
 var db;
+var cors = require('cors');
 const bodyParser = require('body-parser')
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
+app.use(cors());
 
 app.get('/', function(req, res){
     res.send("Welcome to the Tuneity Api");
